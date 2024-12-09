@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Card from './Card.jsx';
+import '../styles/CardGrid.css';
 
 export default function CardGrid() {
   const [spriteList, setSpriteList] = useState([]);
@@ -44,10 +45,10 @@ export default function CardGrid() {
   }, []); // Function will only run once (on mount)
 
   return (
-    <>
+    <div className="card-grid">
       {spriteList.map((card) => {
         return <Card sprite={card.sprite} name={card.name} key={card.key} />;
       })}
-    </>
+    </div>
   );
 }
