@@ -7,10 +7,24 @@ export default function Card({
   id,
   clicked,
   setClicked,
+  score,
+  changeScore,
+  highScore,
+  changeHighScore,
 }) {
   const handleClick = () => {
     shuffle();
-    setClicked([...clicked, id]);
+    console.log(clicked, id);
+    if (clicked.includes(id)) {
+      setClicked([]);
+      changeScore(0);
+    } else {
+      setClicked([...clicked, id]);
+      changeScore(score + 1);
+      if (score + 1 > highScore) {
+        changeHighScore(score + 1);
+      }
+    }
   };
 
   return (

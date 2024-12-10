@@ -2,7 +2,12 @@ import { useState, useEffect } from 'react';
 import Card from './Card.jsx';
 import '../styles/CardGrid.css';
 
-export default function CardGrid() {
+export default function CardGrid({
+  score,
+  changeScore,
+  highScore,
+  changeHighScore,
+}) {
   const [spriteList, setSpriteList] = useState([]);
   const [clickedId, setClickedId] = useState([]);
 
@@ -32,7 +37,7 @@ export default function CardGrid() {
           );
           const json = await response.json(); // Resolve the Promise and place the fetched data into the json variable
           return {
-            sprite: json.sprites.front_default,
+            sprite: json.sprites.other['official-artwork'].front_default,
             name: pokemon,
             key: index,
           }; // Returns the sprite from the json as a Promise
@@ -46,6 +51,7 @@ export default function CardGrid() {
   }, []); // Function will only run once (on mount)
 
   const shuffle = () => {
+    //Randomly shuffles array when a card is clicked
     const shuffled = [...spriteList];
     for (let i = shuffled.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -66,6 +72,10 @@ export default function CardGrid() {
             shuffle={shuffle}
             clicked={clickedId}
             setClicked={setClickedId}
+            score={score}
+            changeScore={changeScore}
+            highScore={highScore}
+            changeHighScore={changeHighScore}
           />
         );
       })}
