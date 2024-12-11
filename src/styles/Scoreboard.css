@@ -1,11 +1,12 @@
-header {
+.scoreboard {
   display: flex;
   justify-content: center;
+  gap: 20px;
 }
 
-.title {
+.score {
   color: #ffcc00;
-  font-size: 2.5rem;
-  -webkit-text-stroke-width: 3px;
+  font-size: 1.5rem;
+  -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #0075be;
 }

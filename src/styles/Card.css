@@ -1,4 +1,6 @@
 .card {
+  padding: 20px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,9 +10,21 @@
   font-size: 2rem;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #0075be;
+
+  background-color: rgba(116, 115, 115, 0.39);
 }
 
 .card img {
   width: 170px;
   height: auto;
+}
+
+.card-label {
+  margin: 0;
+  padding: 5px;
+}
+
+.card:hover {
+  cursor: pointer;
+  background-color: rgba(182, 182, 182, 0.39);
 }

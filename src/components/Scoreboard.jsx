@@ -1,3 +1,5 @@
+import '../styles/Scoreboard.css';
+
 export default function Scoreboard({ score, highScore }) {
   return (
     <div className="scoreboard">
@@ -5,7 +7,7 @@ export default function Scoreboard({ score, highScore }) {
         {' '}
         <span className="score-label">Current Score:</span> {score}{' '}
       </p>
-      <p className="scire">
+      <p className="score">
         {' '}
         <span className="score-label"> High Score:</span> {highScore}
       </p>

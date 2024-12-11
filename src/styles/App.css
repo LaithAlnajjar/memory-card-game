@@ -2,4 +2,8 @@
 
 #root {
   font-family: 'Luckiest Guy';
+  background-image: url('../assets/pokemon-pixel-art-bg.jpg');
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
 }
