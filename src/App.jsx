@@ -1,7 +1,8 @@
 import { useState } from 'react';
+import Header from './components/Header.jsx';
 import CardGrid from './components/CardGrid.jsx';
-import './styles/App.css';
 import Scoreboard from './components/Scoreboard.jsx';
+import './styles/App.css';
 
 function App() {
   const [curScore, setCurScore] = useState(0);
@@ -9,6 +10,7 @@ function App() {
 
   return (
     <>
+      <Header />
       <Scoreboard score={curScore} highScore={highScore} />
       <CardGrid
         score={curScore}

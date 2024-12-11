@@ -1,0 +1,11 @@
+header {
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  color: #ffcc00;
+  font-size: 3rem;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: #0075be;
+}

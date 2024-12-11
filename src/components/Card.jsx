@@ -24,6 +24,12 @@ export default function Card({
       if (score + 1 > highScore) {
         changeHighScore(score + 1);
       }
+
+      if (score + 1 == 12) {
+        alert('Congrats!');
+        setClicked([]);
+        changeScore(0);
+      }
     }
   };
 

@@ -4,8 +4,10 @@
   justify-content: center;
   align-items: center;
 
-  /* Temp */
-  border: 2px black solid;
+  color: #ffcc00;
+  font-size: 2rem;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #0075be;
 }
 
 .card img {
