@@ -15,4 +15,4 @@ A simple React game where the user tries to avoid clicking a card twice to get t
 ## Demo
 
 You can view the live demo of the project here:  
-[Live Demo](laith-memory-card-game.vercel.app)
+[Live Demo](https://laith-memory-card-game.vercel.app/)
